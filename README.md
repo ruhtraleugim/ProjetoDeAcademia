@@ -32,8 +32,12 @@
 
 ### Estrutura de classes:
 <ol>
-  <li>Aluno</li>
-  <li>Instrutor</li>
+  <li>User</li>
+  <ul>
+    <li>Aluno</li>
+    <li>Instrutor</li>
+  </ul>
+  
   <li>PlanoDeTreino</li>
   <li>Frequencia</li>
   <li>Pagamento</li>
