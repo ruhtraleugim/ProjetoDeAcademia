@@ -12,7 +12,7 @@
 </ul>
 
 ## Sobre o projeto:
-## Arquitetura:
+### Arquitetura:
 <ul>
   <li>MVC (Model, View, Control)
     <p>Foi escolhida por facilitar a manutenção e ser facilmente escalável. Para saber mais sobre o 
@@ -20,3 +20,21 @@
     </p>
   </li>
 </ul>
+ 
+### Requisitos:
+<ul>
+  <li>Cadastro de alunos</li>
+  <li>Cadastro de instrutores</li>
+  <li>Cadastro de planos de treino</li>
+  <li>Controle de frequência dos alunos</li>
+  <li>Pagamentos de mensalidades</li>
+</ul>
+
+### Estrutura de classes:
+<ol>
+  <li>Aluno</li>
+  <li>Instrutor</li>
+  <li>PlanoDeTreino</li>
+  <li>Frequencia</li>
+  <li>Pagamento</li>
+</ol>
