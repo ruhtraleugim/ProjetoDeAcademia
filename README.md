@@ -1,11 +1,12 @@
-##﻿# Se da inicio ao ProjetoDeSistemadeAcademia. 
+# Se da inicio ao ProjetoDeSistemadeAcademia. 
 ## realizado por merito de:
- 
-#Arthur Miguel Souto de Bastos Simões;
-#João Pedro Ferreira Faria;
-#Thiago Silva Melo de Oliveira;
-#Ana Carolina Silva Chaves;
-#Anna Vitória Viana dos Santos;
-#Paulo Victor Maciel de Souza;
-#Rodrigo Nogueira de Oliveira;
-#Luiz Gustavo Pereira de Carvalho.
+ <ul>
+<li>Arthur Miguel Souto de Bastos Simões;
+<li>João Pedro Ferreira Faria;
+<li>Thiago Silva Melo de Oliveira;
+<li>Ana Carolina Silva Chaves;
+<li>Anna Vitória Viana dos Santos;
+<li>Paulo Victor Maciel de Souza;
+<li>Rodrigo Nogueira de Oliveira;
+<li>Luiz Gustavo Pereira de Carvalho.
+<ul/>
