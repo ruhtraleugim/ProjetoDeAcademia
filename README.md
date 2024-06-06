@@ -1,4 +1,4 @@
-# Se da inicio ao ProjetoDeSistemadeAcademia. 
+# Se da inicio ao Projeto De Sistema De Academia Generico2000. 
 ## realizado por merito de:
  <ul>
 <li>Arthur Miguel Souto de Bastos Simões;
