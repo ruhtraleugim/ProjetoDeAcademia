@@ -32,13 +32,18 @@
 
 ### Estrutura de classes:
 <ol>
-  <li>User</li>
-  <ul>
-    <li>Aluno</li>
-    <li>Instrutor</li>
-  </ul>
-  
-  <li>PlanoDeTreino</li>
-  <li>Frequencia</li>
-  <li>Pagamento</li>
+  <li>Usuário</li>
+    <ul>
+      <li>Aluno</li>
+      <li>Instrutor</li>
+    </ul>
+  <li>Planos e pagamentos</li>
+    <ul>
+      <li>Plano De Treino</li>
+      <li>Frequencia</li>
+      <li>Planos De Mensalidade</li>
+    </ul>
+  <li>Aulas e Atividades</li>
+  <li>Equipamentos e Infra-estrutura</li>
+
 </ol>
