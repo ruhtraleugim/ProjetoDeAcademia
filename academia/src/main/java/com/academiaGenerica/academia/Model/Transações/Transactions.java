@@ -1,5 +1,9 @@
 package com.academiaGenerica.academia.Model.Transações;
 
+import com.academiaGenerica.academia.Model.Planos.Planos;
+import com.academiaGenerica.academia.Model.User.AlunoModel;
+import com.academiaGenerica.academia.Model.User.FuncionarioModel;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -11,17 +15,18 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity(name = "Transactions")
-@Table(name = "Transactions")
+@Entity(name = "Transaction")
+@Table(name = "Transaction")
 @NoArgsConstructor
 @AllArgsConstructor
 @Setter
 @Getter
 @EqualsAndHashCode(of = "idTransaction")
 public class Transactions {
-    private String nome;
-    private int cpf;
-    private String planodeacademia;
+
+    private AlunoModel alunoNome;
+    private FuncionarioModel cpf;
+    private Planos planodeacademia;
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

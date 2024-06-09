@@ -20,7 +20,8 @@ import lombok.Setter;
 @EqualsAndHashCode(of = "idFuncionario")
 public class FuncionarioModel {
     private String name;
-    private String CPF;
+    private String cargo;
+    private String cpf;
     private String tel;
     private String email;
     @Id

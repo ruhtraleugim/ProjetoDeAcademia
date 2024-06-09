@@ -26,5 +26,5 @@ public class AlunoModel {
     private String aulas;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idAluno;
+    private Long idAluno;
 }
