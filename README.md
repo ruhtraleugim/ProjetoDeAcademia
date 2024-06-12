@@ -37,13 +37,13 @@
       <li>Aluno</li>
       <li>Instrutor</li>
     </ul>
-  <li>Planos e pagamentos</li>
+  <li>Planos</li>
     <ul>
       <li>Plano De Treino</li>
-      <li>Frequencia</li>
       <li>Planos De Mensalidade</li>
     </ul>
+  <li>Transações</li>
+  
   <li>Aulas e Atividades</li>
-  <li>Equipamentos e Infra-estrutura</li>
 
 </ol>

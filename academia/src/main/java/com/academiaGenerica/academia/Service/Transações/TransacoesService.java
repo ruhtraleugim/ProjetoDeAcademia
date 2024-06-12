@@ -10,5 +10,5 @@ public class TransacoesService {
 
     @Autowired
     TransacoesRepository transacoesRepository;
-    
+
 }

@@ -11,5 +11,4 @@ public class AlunoService {
     @Autowired
     AlunoRepository alunoRepository;
 
-    
 }
