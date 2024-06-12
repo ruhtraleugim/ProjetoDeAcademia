@@ -18,10 +18,10 @@ import lombok.Setter;
 @Setter
 @Getter
 @EqualsAndHashCode(of = "idPlanosDeTreino")
-public class PlanosDeTreino {
+public class PlanosDeTreinoModel {
 
+    public String grupoDeMusculos;
     public String nomeDoExercicio;
-
     public int tempoEmMInutos;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

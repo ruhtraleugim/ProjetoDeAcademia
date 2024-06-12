@@ -15,19 +15,19 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity(name = "Transaction")
+@Entity(name = "transaction")
 @Table(name = "transaction")
 @NoArgsConstructor
 @AllArgsConstructor
 @Setter
 @Getter
 @EqualsAndHashCode(of = "idTransaction")
-public class TransactionsModel {
-
-    private AlunoModel alunoNome;
-    private FuncionarioModel cpf;
-    private PlanosMonetariosModel planodeacademia;
+public class TransacoesModel {
     
+    private String razaoPagamento;
+    private Long cpfDoRecebedor;
+    private Long cpfDoEnviador;
+    private double valorDoPagamento;    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idTransaction;

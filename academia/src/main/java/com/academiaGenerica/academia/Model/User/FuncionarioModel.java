@@ -19,11 +19,13 @@ import lombok.Setter;
 @NoArgsConstructor
 @EqualsAndHashCode(of = "idFuncionario")
 public class FuncionarioModel {
-    private String name;
+    
+    private String nome;
     private String cargo;
     private String cpf;
     private String tel;
     private String email;
+    private double salario;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idFuncionario;

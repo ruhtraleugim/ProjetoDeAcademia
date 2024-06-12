@@ -19,11 +19,14 @@ import lombok.Setter;
 @Getter
 @EqualsAndHashCode(of = "idAluno")
 public class AlunoModel {
+    
     private String nome;
     private String cpf;
     private String cel;
     private String email;
     private String aulas;
+    private double peso;
+    private double altura;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idAluno;
