@@ -1,4 +1,4 @@
-package com.academiaGenerica.academia.Repositories;
+package com.academiaGenerica.academia.Repositories.User;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

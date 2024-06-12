@@ -11,19 +11,19 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity(name = "Planos")
-@Table(name = "Planos")
+@Entity(name = "PlanosMonetarios")
+@Table(name = "PlanosMonetarios")
 @NoArgsConstructor
 @AllArgsConstructor
 @Setter
 @Getter
-@EqualsAndHashCode(of = "idPlano")
-public class Planos {
-    private String nomePlano;
-    private String descricao;
-    private double precoMensal;
+@EqualsAndHashCode(of = "idPlanosMonetarios")
+public class PlanosMonetariosModel {
     
+    private String tipoDoPlano;
+    private String descricao;
+    private double preco;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idPlano;
+    private long idPlanosMonetarios;
 }

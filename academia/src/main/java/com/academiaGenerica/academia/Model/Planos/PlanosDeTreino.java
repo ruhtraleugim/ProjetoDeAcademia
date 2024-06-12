@@ -1,4 +1,4 @@
-package com.academiaGenerica.academia.Model.Equipamento;
+package com.academiaGenerica.academia.Model.Planos;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -11,19 +11,19 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity(name = "Equipamentos")
-@Table(name = "Equipamentos")
+@Entity(name = "PlanosDeTreino")
+@Table(name = "PlanosDeTreino")
 @NoArgsConstructor
 @AllArgsConstructor
 @Setter
 @Getter
-@EqualsAndHashCode(of = "idEquipamento")
-public class Equipamentos {
-    private String nomeEquipamento;
-    private String descricao;
-    private int quantidadeDisponivel;
-    
+@EqualsAndHashCode(of = "idPlanosDeTreino")
+public class PlanosDeTreino {
+
+    public String nomeDoExercicio;
+
+    public int tempoEmMInutos;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idEquipamento;
+    public long idPlanosDeTreino;
 }

@@ -1,6 +1,6 @@
 package com.academiaGenerica.academia.Model.Transações;
 
-import com.academiaGenerica.academia.Model.Planos.Planos;
+import com.academiaGenerica.academia.Model.Planos.PlanosMonetariosModel;
 import com.academiaGenerica.academia.Model.User.AlunoModel;
 import com.academiaGenerica.academia.Model.User.FuncionarioModel;
 
@@ -22,11 +22,11 @@ import lombok.Setter;
 @Setter
 @Getter
 @EqualsAndHashCode(of = "idTransaction")
-public class Transactions {
+public class TransactionsModel {
 
     private AlunoModel alunoNome;
     private FuncionarioModel cpf;
-    private Planos planodeacademia;
+    private PlanosMonetariosModel planodeacademia;
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
