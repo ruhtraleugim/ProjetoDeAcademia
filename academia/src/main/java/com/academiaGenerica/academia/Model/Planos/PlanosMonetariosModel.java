@@ -26,4 +26,5 @@ public class PlanosMonetariosModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idPlanosMonetarios;
+    
 }

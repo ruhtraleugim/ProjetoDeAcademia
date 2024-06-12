@@ -19,7 +19,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @EqualsAndHashCode(of = "idFuncionario")
 public class FuncionarioModel {
-    
+
     private String nome;
     private String cargo;
     private String cpf;

@@ -26,4 +26,5 @@ public class PlanosDeTreinoModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public long idPlanosDeTreino;
+    
 }

@@ -1,9 +1,5 @@
 package com.academiaGenerica.academia.Model.Transações;
 
-import com.academiaGenerica.academia.Model.Planos.PlanosMonetariosModel;
-import com.academiaGenerica.academia.Model.User.AlunoModel;
-import com.academiaGenerica.academia.Model.User.FuncionarioModel;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

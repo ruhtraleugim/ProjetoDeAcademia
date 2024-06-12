@@ -19,7 +19,7 @@ import lombok.Setter;
 @Getter
 @EqualsAndHashCode(of = "idAluno")
 public class AlunoModel {
-    
+
     private String nome;
     private String cpf;
     private String cel;
