@@ -18,7 +18,7 @@ public class CadastroTreinos extends JPanel {
     private void initComponents() {
         setLayout(new GridLayout(4, 2, 10, 10));
         setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-
+        setBackground(new Color(0x2E2E2E));
         JLabel labelNomeTreino = new JLabel("Nome do Treino:");
         txtNomeTreino = new JTextField();
 

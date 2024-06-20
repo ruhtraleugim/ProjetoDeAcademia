@@ -21,7 +21,7 @@ public class MenuPrincipal extends JFrame {
     private void initComponents() {
         setTitle("Menu Principal");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(800, 600);
+        setSize(1200, 800);
         setLocationRelativeTo(null);
 
         // Configuração do CardLayout para alternar entre os painéis
@@ -42,31 +42,28 @@ public class MenuPrincipal extends JFrame {
         cardPanel.add(cadastroTreinos.getPanel(), "treinos");
 
         // Botões para alternar entre os painéis
-        JButton btnCadastroFuncionario = new JButton("Cadastro de Funcionário");
+        JButton btnCadastroFuncionario = new JButton("Cadastrar Funcionário");
         btnCadastroFuncionario.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 cardLayout.show(cardPanel, "funcionario");
             }
         });
-
-        JButton btnCadastroCliente = new JButton("Cadastro de Cliente");
+        JButton btnCadastroCliente = new JButton("Cadastar Cliente");
         btnCadastroCliente.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 cardLayout.show(cardPanel, "cliente");
             }
         });
-
-        JButton btnCadastroTransacoes = new JButton("Cadastro de Transações");
+        JButton btnCadastroTransacoes = new JButton("Cadastrar Transações");
         btnCadastroTransacoes.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 cardLayout.show(cardPanel, "transacoes");
             }
         });
-
-        JButton btnCadastroTreinos = new JButton("Cadastro de Treinos");
+        JButton btnCadastroTreinos = new JButton("Cadastrar Treinos");
         btnCadastroTreinos.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -74,14 +71,14 @@ public class MenuPrincipal extends JFrame {
             }
         });
 
-        // Layout do MenuPrincipal
+        // Layout do Menu Principal
         JPanel buttonPanel = new JPanel(new GridLayout(2, 2, 10, 10));
         buttonPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         buttonPanel.add(btnCadastroFuncionario);
         buttonPanel.add(btnCadastroCliente);
         buttonPanel.add(btnCadastroTransacoes);
         buttonPanel.add(btnCadastroTreinos);
-
+        buttonPanel.setBackground(new Color(0x2E2E2E));
         getContentPane().setLayout(new BorderLayout());
         getContentPane().add(buttonPanel, BorderLayout.NORTH);
         getContentPane().add(cardPanel, BorderLayout.CENTER);
