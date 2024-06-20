@@ -1,59 +1,66 @@
 package com.academiaGenerica.academia.View.Planos.Treino;
 
 import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 
 public class CadastroTreinos extends JFrame {
 
-    private JScrollPane jScrollPane1;
-    private JTable jTable1;
-    private JLabel jLabel2;
-    private JButton jButton1;
-    private JLabel jLabel1;
+    private JTextField txtNomeTreino;
+    private JTextField txtDescricaoTreino;
+    private JTextField txtDuracaoTreino;
 
     public CadastroTreinos() {
         initComponents();
     }
 
     private void initComponents() {
+        setTitle("Cadastro de Treinos");
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        setSize(400, 300);
+        setLocationRelativeTo(null);
 
-        jScrollPane1 = new JScrollPane();
-        jTable1 = new JTable();
-        jLabel2 = new JLabel();
-        jButton1 = new JButton();
-        jLabel1 = new JLabel();
+        JPanel mainPanel = new JPanel();
+        mainPanel.setLayout(new GridLayout(4, 2, 10, 10));
+        mainPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new BorderLayout());
+        JLabel labelNomeTreino = new JLabel("Nome do Treino:");
+        txtNomeTreino = new JTextField();
 
-        jTable1.setModel(new DefaultTableModel(
-            new Object [][] {
-                {"João Silva", "12345", "2024-06-20", "Treino de musculação focado em membros inferiores", "Ana Rodrigues", "Ganho de massa muscular", "Barra e anilhas", "Cliente iniciante, explicar os exercícios com detalhes"},
-                {"Maria Souza", "67890", "2024-06-22", "Treino de circuito de alta intensidade", "Carlos Santos", "Melhora da resistência cardiovascular", "Esteira e halteres", "Cliente possui lesão no joelho esquerdo, evitar impacto"},
-                {"Pedro Oliveira", "54321", "2024-06-25", "Treino de pilates para iniciantes", "Fernanda Lima", "Flexibilidade e relaxamento", "Bolas de pilates e faixas elásticas", "Cliente prefere treinos no período da manhã"},
-                {null, null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "Nome Cliente", "ID", "Data Treino", "Descrição Treino", "Instrutor Responsável", "Objetivo Treino", "Equipamentos", "Observações"
-            }
-        ));
-        jScrollPane1.setViewportView(jTable1);
+        JLabel labelDescricaoTreino = new JLabel("Descrição:");
+        txtDescricaoTreino = new JTextField();
 
-        getContentPane().add(jScrollPane1, BorderLayout.CENTER);
+        JLabel labelDuracaoTreino = new JLabel("Duração (minutos):");
+        txtDuracaoTreino = new JTextField();
 
-        jLabel2.setFont(new Font("Arial", Font.BOLD, 24));
-        jLabel2.setForeground(Color.BLACK);
-        jLabel2.setHorizontalAlignment(SwingConstants.CENTER);
-        jLabel2.setText("Treinos Agendados");
-        getContentPane().add(jLabel2, BorderLayout.NORTH);
+        mainPanel.add(labelNomeTreino);
+        mainPanel.add(txtNomeTreino);
+        mainPanel.add(labelDescricaoTreino);
+        mainPanel.add(txtDescricaoTreino);
+        mainPanel.add(labelDuracaoTreino);
+        mainPanel.add(txtDuracaoTreino);
 
-        jButton1.setText("Incluir Novo Treino");
-        getContentPane().add(jButton1, BorderLayout.SOUTH);
+        JButton btnCadastrarTreino = new JButton("Cadastrar");
+        btnCadastrarTreino.addActionListener(e -> cadastrarTreino());
 
-        jLabel1.setIcon(new ImageIcon(getClass().getResource("./resouces/templates/halteres-no-chao-de-uma-academia-ai-generative.jpg")));
-        getContentPane().add(jLabel1, BorderLayout.WEST);
+        mainPanel.add(new JLabel());  // Espaço vazio
+        mainPanel.add(btnCadastrarTreino);
 
-        pack();
+        add(mainPanel);
+    }
+
+    private void cadastrarTreino() {
+        String nomeTreino = txtNomeTreino.getText();
+        String descricaoTreino = txtDescricaoTreino.getText();
+        String duracaoTreino = txtDuracaoTreino.getText();
+
+        JOptionPane.showMessageDialog(this,
+                "Treino cadastrado:\n" +
+                        "Nome: " + nomeTreino + "\n" +
+                        "Descrição: " + descricaoTreino + "\n" +
+                        "Duração: " + duracaoTreino + " minutos");
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> new CadastroTreinos().setVisible(true));
     }
 }

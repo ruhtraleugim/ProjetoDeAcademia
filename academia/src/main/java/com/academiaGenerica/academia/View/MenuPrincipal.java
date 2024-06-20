@@ -1,27 +1,22 @@
 package com.academiaGenerica.academia.View;
 
 import javax.swing.*;
-
+import java.awt.*;
 import com.academiaGenerica.academia.View.Planos.Treino.CadastroTreinos;
 import com.academiaGenerica.academia.View.Transações.CadastroTransacoes;
 import com.academiaGenerica.academia.View.User.Cliente.CadastroCliente;
 import com.academiaGenerica.academia.View.User.Funcionario.CadastroFuncionario;
-
-import java.awt.*;
 
 public class MenuPrincipal extends JFrame {
     CadastroFuncionario cadastroFuncionario = new CadastroFuncionario();
     CadastroCliente cadastroCliente = new CadastroCliente();
     CadastroTransacoes cadastroTransacoes = new CadastroTransacoes();
     CadastroTreinos cadastroTreinos = new CadastroTreinos();
-    
-
 
     private JButton jButton1;
     private JButton jButton3;
     private JButton jButton4;
     private JLabel jLabel1;
-    private JLabel jLabel2;
     private JMenuBar jMenuBar1;
     private JMenu jMenuCadastro;
     private JMenu jMenuFinanceiro;
@@ -47,17 +42,13 @@ public class MenuPrincipal extends JFrame {
         setTitle("Menu Principal");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(1210, 640);
-        setLocationRelativeTo(null); 
+        setLocationRelativeTo(null);
 
         getContentPane().setLayout(new BorderLayout());
 
-        jLabel2 = new JLabel();
-        jLabel2.setIcon(new ImageIcon(getClass().getResource("SistemaDeAcademia/academia/src/main/resources/templates/halteres-no-chao-de-uma-academia-ai-generative.jpg")));
-        getContentPane().add(jLabel2, BorderLayout.CENTER);
-
         jLabel1 = new JLabel("Seja bem vindo!");
         jLabel1.setFont(new Font("Arial", Font.BOLD, 24));
-        jLabel1.setForeground(Color.WHITE);
+        jLabel1.setForeground(Color.BLACK);
         jLabel1.setHorizontalAlignment(SwingConstants.CENTER);
         getContentPane().add(jLabel1, BorderLayout.NORTH);
 
@@ -80,16 +71,16 @@ public class MenuPrincipal extends JFrame {
         jMenuBar1 = new JMenuBar();
         jMenuCadastro = new JMenu("Cadastro");
 
-        jMenuItemClientes = new JMenuItem("Cadastrar Clientes", new ImageIcon(getClass().getResource("icons8-add-user-24.png")));
+        jMenuItemClientes = new JMenuItem("Cadastrar Clientes");
         jMenuCadastro.add(jMenuItemClientes);
 
-        jMenuItemInstrutores = new JMenuItem("Cadastrar Instrutores", new ImageIcon(getClass().getResource("icons8-personal-trainer-24.png")));
+        jMenuItemInstrutores = new JMenuItem("Cadastrar Instrutores");
         jMenuCadastro.add(jMenuItemInstrutores);
 
-        jMenuItemTreinos = new JMenuItem("Cadastrar Treinos", new ImageIcon(getClass().getResource("icons8-add-properties-24.png")));
+        jMenuItemTreinos = new JMenuItem("Cadastrar Treinos");
         jMenuCadastro.add(jMenuItemTreinos);
 
-        jMenuItemMaquinas = new JMenuItem("Cadastrar Máquinas e Aparelhos", new ImageIcon(getClass().getResource("icons8-gym-24.png")));
+        jMenuItemMaquinas = new JMenuItem("Cadastrar Máquinas e Aparelhos");
         jMenuCadastro.add(jMenuItemMaquinas);
 
         jMenuBar1.add(jMenuCadastro);
@@ -136,8 +127,6 @@ public class MenuPrincipal extends JFrame {
             public void run() {
                 new MenuPrincipal();
             }
-            
         });
-        
     }
 }

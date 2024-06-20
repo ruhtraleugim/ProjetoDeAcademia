@@ -2,140 +2,81 @@ package com.academiaGenerica.academia.View.User.Cliente;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
-public class CadastroCliente extends javax.swing.JFrame {
+public class CadastroCliente extends JFrame {
 
-    private JButton jButton1;
-    private JFormattedTextField jFormattedTextField1;
-    private JLabel jLabel1;
-    private JLabel jLabel10;
-    private JLabel jLabel11;
-    private JLabel jLabel18;
-    private JLabel jLabel19;
-    private JLabel jLabel2;
-    private JLabel jLabel4;
-    private JLabel jLabel5;
-    private JLabel jLabel6;
-    private JLabel jLabel8;
-    private JTextField jTextField10;
-    private JTextField jTextField11;
-    private JTextField jTextField2;
-    private JTextField jTextField3;
-    private JTextField jTextField4;
-    private JTextField jTextField5;
+    private JTextField txtNomeCliente;
+    private JTextField txtCpfCliente;
+    private JTextField txtEnderecoCliente;
+    private JTextField txtTelefoneCliente;
+    private JTextField txtEmailCliente;
 
     public CadastroCliente() {
         initComponents();
     }
 
     private void initComponents() {
+        setTitle("Cadastro de Cliente");
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        setSize(400, 300);
+        setLocationRelativeTo(null);
 
-        jLabel2 = new JLabel();
-        jTextField2 = new JTextField();
-        jLabel4 = new JLabel();
-        jLabel5 = new JLabel();
-        jTextField3 = new JTextField();
-        jTextField4 = new JTextField();
-        jLabel6 = new JLabel();
-        jLabel8 = new JLabel();
-        jFormattedTextField1 = new JFormattedTextField();
-        jLabel10 = new JLabel();
-        jLabel11 = new JLabel();
-        jTextField5 = new JTextField();
-        jButton1 = new JButton();
-        jLabel18 = new JLabel();
-        jTextField10 = new JTextField();
-        jLabel19 = new JLabel();
-        jTextField11 = new JTextField();
-        jLabel1 = new JLabel();
+        JPanel mainPanel = new JPanel();
+        mainPanel.setLayout(new GridLayout(6, 2, 10, 10));
+        mainPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new FlowLayout()); // Usando FlowLayout
+        JLabel labelNomeCliente = new JLabel("Nome:");
+        txtNomeCliente = new JTextField();
 
-        // Configurações e adição de componentes
-        jLabel2.setFont(new java.awt.Font("Arial", 0, 24)); 
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Cadastrar Clientes");
-        add(jLabel2);
+        JLabel labelCpfCliente = new JLabel("CPF:");
+        txtCpfCliente = new JTextField();
 
-        jLabel6.setText("Nome:");
-        add(jLabel6);
-        add(jTextField4);
-        jTextField4.setColumns(20); // Definindo tamanho do JTextField
+        JLabel labelEnderecoCliente = new JLabel("Endereço:");
+        txtEnderecoCliente = new JTextField();
 
-        jLabel5.setText("CPF:");
-        add(jLabel5);
-        add(jTextField3);
-        jTextField3.setColumns(20);
+        JLabel labelTelefoneCliente = new JLabel("Telefone:");
+        txtTelefoneCliente = new JTextField();
 
-        jLabel11.setText("Cel:");
-        add(jLabel11);
-        add(jTextField5);
-        jTextField5.setColumns(20);
+        JLabel labelEmailCliente = new JLabel("Email:");
+        txtEmailCliente = new JTextField();
 
-        jLabel4.setText("Email:");
-        add(jLabel4);
-        add(jFormattedTextField1);
-        jFormattedTextField1.setColumns(20);
+        mainPanel.add(labelNomeCliente);
+        mainPanel.add(txtNomeCliente);
+        mainPanel.add(labelCpfCliente);
+        mainPanel.add(txtCpfCliente);
+        mainPanel.add(labelEnderecoCliente);
+        mainPanel.add(txtEnderecoCliente);
+        mainPanel.add(labelTelefoneCliente);
+        mainPanel.add(txtTelefoneCliente);
+        mainPanel.add(labelEmailCliente);
+        mainPanel.add(txtEmailCliente);
 
-        jLabel8.setText("Aulas:");
-        add(jLabel8);
-        add(jTextField2);
-        jTextField2.setColumns(20);
+        JButton btnCadastrarCliente = new JButton("Cadastrar");
+        btnCadastrarCliente.addActionListener(e -> cadastrarCliente());
 
-        jLabel19.setText("Peso:");
-        add(jLabel19);
-        add(jTextField11);
-        jTextField11.setColumns(20);
+        mainPanel.add(new JLabel());  // Espaço vazio
+        mainPanel.add(btnCadastrarCliente);
 
-        jLabel18.setText("Altura:");
-        add(jLabel18);
-        add(jTextField10);
-        jTextField10.setColumns(20);
-
-        jButton1.setText("Cadastrar usuário");
-        jButton1.setBackground(new java.awt.Color(153, 255, 153));
-        jButton1.setFont(new java.awt.Font("Arial", 1, 18));
-        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent evt) {
-                cadastrarUsuario(evt);
-            }
-        });
-        add(jButton1);
-
-        // Imagem de fundo
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("./resouces/templates/halteres-no-chao-de-uma-academia-ai-generative.jpg")));
-        add(jLabel1);
-
-        pack();
+        add(mainPanel);
     }
 
-    private void cadastrarUsuario(ActionEvent evt) {
-        // Aqui você pode implementar a lógica para cadastrar o usuário
-        String nome = jTextField4.getText();
-        String cpf = jTextField3.getText();
-        String celular = jTextField5.getText();
-        String email = jFormattedTextField1.getText();
-        String aulas = jTextField2.getText();
-        String peso = jTextField11.getText();
-        String altura = jTextField10.getText();
+    private void cadastrarCliente() {
+        String nomeCliente = txtNomeCliente.getText();
+        String cpfCliente = txtCpfCliente.getText();
+        String enderecoCliente = txtEnderecoCliente.getText();
+        String telefoneCliente = txtTelefoneCliente.getText();
+        String emailCliente = txtEmailCliente.getText();
 
-        // Implemente a lógica de backend para salvar esses dados
-        Backend backend = new Backend();
-        String response = backend.processData(nome, cpf, celular, email, aulas, peso, altura);
-        JOptionPane.showMessageDialog(this, response);
+        JOptionPane.showMessageDialog(this,
+                "Cliente cadastrado:\n" +
+                        "Nome: " + nomeCliente + "\n" +
+                        "CPF: " + cpfCliente + "\n" +
+                        "Endereço: " + enderecoCliente + "\n" +
+                        "Telefone: " + telefoneCliente + "\n" +
+                        "Email: " + emailCliente);
     }
 
-    class Backend {
-        public String processData(String nome, String cpf, String celular, String email, String aulas, String peso, String altura) {
-            // Lógica do backend para processar os dados
-            return "Usuário cadastrado: " + nome + ", CPF: " + cpf + ", Cel: " + celular + ", Email: " + email +
-                    ", Aulas: " + aulas + ", Peso: " + peso + ", Altura: " + altura;
-        }
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> new CadastroCliente().setVisible(true));
     }
 }
