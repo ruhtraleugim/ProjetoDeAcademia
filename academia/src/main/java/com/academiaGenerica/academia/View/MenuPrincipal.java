@@ -1,9 +1,21 @@
 package com.academiaGenerica.academia.View;
 
 import javax.swing.*;
+
+import com.academiaGenerica.academia.View.Planos.Treino.CadastroTreinos;
+import com.academiaGenerica.academia.View.Transações.CadastroTransacoes;
+import com.academiaGenerica.academia.View.User.Cliente.CadastroCliente;
+import com.academiaGenerica.academia.View.User.Funcionario.CadastroFuncionario;
+
 import java.awt.*;
 
 public class MenuPrincipal extends JFrame {
+    CadastroFuncionario cadastroFuncionario = new CadastroFuncionario();
+    CadastroCliente cadastroCliente = new CadastroCliente();
+    CadastroTransacoes cadastroTransacoes = new CadastroTransacoes();
+    CadastroTreinos cadastroTreinos = new CadastroTreinos();
+    
+
 
     private JButton jButton1;
     private JButton jButton3;
@@ -40,7 +52,7 @@ public class MenuPrincipal extends JFrame {
         getContentPane().setLayout(new BorderLayout());
 
         jLabel2 = new JLabel();
-        jLabel2.setIcon(new ImageIcon(getClass().getResource("./academia/src/main/resources/templates/halteres-no-chao-de-uma-academia-ai-generative.jpg")));
+        jLabel2.setIcon(new ImageIcon(getClass().getResource("SistemaDeAcademia/academia/src/main/resources/templates/halteres-no-chao-de-uma-academia-ai-generative.jpg")));
         getContentPane().add(jLabel2, BorderLayout.CENTER);
 
         jLabel1 = new JLabel("Seja bem vindo!");
@@ -124,6 +136,8 @@ public class MenuPrincipal extends JFrame {
             public void run() {
                 new MenuPrincipal();
             }
+            
         });
+        
     }
 }

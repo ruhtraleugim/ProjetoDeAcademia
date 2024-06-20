@@ -3,7 +3,7 @@ package com.academiaGenerica.academia.View.Transações;
 import javax.swing.*;
 import java.awt.*;
 
-public class Transacoes extends JFrame {
+public class CadastroTransacoes extends JFrame {
 
     private JButton jButton1;
     private JLabel jLabel1;
@@ -11,7 +11,7 @@ public class Transacoes extends JFrame {
     private JScrollPane jScrollPane1;
     private JTable jTable1;
 
-    public Transacoes() {
+    public CadastroTransacoes() {
         initComponents();
     }
 
@@ -68,7 +68,7 @@ public class Transacoes extends JFrame {
         jButton1.setBounds(430, 470, 240, 70);
         getContentPane().add(jButton1);
 
-        jLabel1.setIcon(new ImageIcon(getClass().getResource("halteres-no-chao-de-uma-academia-ai-generative.jpg")));
+        jLabel1.setIcon(new ImageIcon(getClass().getResource("")));
         jLabel1.setBounds(0, 0, 978, 768);
         getContentPane().add(jLabel1);
 
