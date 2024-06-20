@@ -5,30 +5,26 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 
-public class CadastroFuncionario {
+public class CadastroFuncionario extends JPanel {
 
-    public void mostrarTela() {
-        
-        JFrame frame = new JFrame("Cadastro de Funcionário");
-        frame.setSize(800, 600);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    public CadastroFuncionario() {
+        initComponents();
+    }
 
-        
-        JPanel mainPanel = new JPanel(new BorderLayout(10, 10));
-        mainPanel.setBackground(new Color(0x2E2E2E));
+    private void initComponents() {
+        setLayout(new BorderLayout(10, 10));
+        setBackground(new Color(0x2E2E2E));
 
-        
         JPanel formPanel = new JPanel(new GridLayout(8, 2, 10, 10));
         formPanel.setBorder(BorderFactory.createTitledBorder(
-                BorderFactory.createLineBorder(Color.WHITE), 
-                "Cadastro de Funcionário", 
-                0, 
-                0, 
-                new Font("Arial", Font.BOLD, 18), 
+                BorderFactory.createLineBorder(Color.WHITE),
+                "Cadastro de Funcionário",
+                0,
+                0,
+                new Font("Arial", Font.BOLD, 18),
                 Color.WHITE));
         formPanel.setBackground(new Color(0x2E2E2E));
 
-        
         JLabel labelNomeFuncionario = new JLabel("Nome:");
         labelNomeFuncionario.setForeground(Color.WHITE);
         JTextField txtNomeFuncionario = new JTextField();
@@ -57,7 +53,6 @@ public class CadastroFuncionario {
         labelDataContratacaoFuncionario.setForeground(Color.WHITE);
         JTextField txtDataContratacaoFuncionario = new JTextField();
 
-        
         formPanel.add(labelNomeFuncionario);
         formPanel.add(txtNomeFuncionario);
         formPanel.add(labelCargoFuncionario);
@@ -73,23 +68,19 @@ public class CadastroFuncionario {
         formPanel.add(labelDataContratacaoFuncionario);
         formPanel.add(txtDataContratacaoFuncionario);
 
-        
         JButton btnCadastrarFuncionario = new JButton("Cadastrar");
         btnCadastrarFuncionario.setBackground(new Color(0x4CAF50));
         btnCadastrarFuncionario.setForeground(Color.WHITE);
         btnCadastrarFuncionario.setFont(new Font("Arial", Font.BOLD, 16));
         btnCadastrarFuncionario.setFocusPainted(false);
 
-        
         JPanel buttonPanel = new JPanel();
         buttonPanel.setBackground(new Color(0x2E2E2E));
         buttonPanel.add(btnCadastrarFuncionario);
 
-        
-        mainPanel.add(formPanel, BorderLayout.CENTER);
-        mainPanel.add(buttonPanel, BorderLayout.SOUTH);
+        add(formPanel, BorderLayout.CENTER);
+        add(buttonPanel, BorderLayout.SOUTH);
 
-        
         btnCadastrarFuncionario.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -101,8 +92,7 @@ public class CadastroFuncionario {
                 String emailFuncionario = txtEmailFuncionario.getText();
                 String dataContratacaoFuncionario = txtDataContratacaoFuncionario.getText();
 
-                
-                JOptionPane.showMessageDialog(frame,
+                JOptionPane.showMessageDialog(CadastroFuncionario.this,
                         "Funcionário cadastrado:\n" +
                                 "Nome: " + nomeFuncionario + "\n" +
                                 "Cargo: " + cargoFuncionario + "\n" +
@@ -113,9 +103,9 @@ public class CadastroFuncionario {
                                 "Data de Contratação: " + dataContratacaoFuncionario);
             }
         });
+    }
 
-        
-        frame.add(mainPanel);
-        frame.setVisible(true);
+    public JPanel getPanel() {
+        return this;
     }
 }
