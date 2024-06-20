@@ -40,7 +40,7 @@ public class MenuPrincipal extends JFrame {
         getContentPane().setLayout(new BorderLayout());
 
         jLabel2 = new JLabel();
-        jLabel2.setIcon(new ImageIcon(getClass().getResource("halteres-no-chao-de-uma-academia-ai-generative.jpg")));
+        jLabel2.setIcon(new ImageIcon(getClass().getResource("./academia/src/main/resources/templates/halteres-no-chao-de-uma-academia-ai-generative.jpg")));
         getContentPane().add(jLabel2, BorderLayout.CENTER);
 
         jLabel1 = new JLabel("Seja bem vindo!");
@@ -53,7 +53,6 @@ public class MenuPrincipal extends JFrame {
         buttonPanel.setOpaque(false);
         buttonPanel.setLayout(new FlowLayout());
 
-        
         jButton1 = new JButton("Cadastros");
         buttonPanel.add(jButton1);
 

@@ -1,4 +1,4 @@
-package com.academiaGenerica.academia.View;
+package com.academiaGenerica.academia.View.User.Cliente;
 
 import javax.swing.*;
 import java.awt.*;
@@ -30,7 +30,6 @@ public class CadastroCliente extends javax.swing.JFrame {
         initComponents();
     }
 
-    @SuppressWarnings("unchecked")
     private void initComponents() {
 
         jLabel2 = new JLabel();
@@ -62,37 +61,37 @@ public class CadastroCliente extends javax.swing.JFrame {
         jLabel2.setText("Cadastrar Clientes");
         add(jLabel2);
 
-        jLabel6.setText("Nome");
+        jLabel6.setText("Nome:");
         add(jLabel6);
         add(jTextField4);
         jTextField4.setColumns(20); // Definindo tamanho do JTextField
 
-        jLabel5.setText("CPF");
+        jLabel5.setText("CPF:");
         add(jLabel5);
         add(jTextField3);
         jTextField3.setColumns(20);
 
-        jLabel11.setText("Cel");
+        jLabel11.setText("Cel:");
         add(jLabel11);
         add(jTextField5);
         jTextField5.setColumns(20);
 
-        jLabel4.setText("Email");
+        jLabel4.setText("Email:");
         add(jLabel4);
         add(jFormattedTextField1);
         jFormattedTextField1.setColumns(20);
 
-        jLabel8.setText("Aulas");
+        jLabel8.setText("Aulas:");
         add(jLabel8);
         add(jTextField2);
         jTextField2.setColumns(20);
 
-        jLabel19.setText("Peso");
+        jLabel19.setText("Peso:");
         add(jLabel19);
         add(jTextField11);
         jTextField11.setColumns(20);
 
-        jLabel18.setText("Altura");
+        jLabel18.setText("Altura:");
         add(jLabel18);
         add(jTextField10);
         jTextField10.setColumns(20);
@@ -110,7 +109,7 @@ public class CadastroCliente extends javax.swing.JFrame {
         add(jButton1);
 
         // Imagem de fundo
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("halteres-no-chao-de-uma-academia-ai-generative.jpg")));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("./resouces/templates/halteres-no-chao-de-uma-academia-ai-generative.jpg")));
         add(jLabel1);
 
         pack();
@@ -130,14 +129,6 @@ public class CadastroCliente extends javax.swing.JFrame {
         Backend backend = new Backend();
         String response = backend.processData(nome, cpf, celular, email, aulas, peso, altura);
         JOptionPane.showMessageDialog(this, response);
-    }
-
-    public static void main(String args[]) {
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new CadastroCliente().setVisible(true);
-            }
-        });
     }
 
     class Backend {

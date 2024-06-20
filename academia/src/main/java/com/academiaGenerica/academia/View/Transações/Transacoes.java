@@ -1,4 +1,4 @@
-package com.academiaGenerica.academia.View;
+package com.academiaGenerica.academia.View.Transações;
 
 import javax.swing.*;
 import java.awt.*;
@@ -73,19 +73,5 @@ public class Transacoes extends JFrame {
         getContentPane().add(jLabel1);
 
         pack();
-    }
-
-    public static void main(String[] args) {
-        // Configuração do Look and Feel
-        try {
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
-            ex.printStackTrace();
-        }
-
-        // Criação e exibição da janela
-        SwingUtilities.invokeLater(() -> {
-            new Transacoes().setVisible(true);
-        });
     }
 }

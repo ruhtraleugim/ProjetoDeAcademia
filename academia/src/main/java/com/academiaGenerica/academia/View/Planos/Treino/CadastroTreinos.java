@@ -1,4 +1,4 @@
-package com.academiaGenerica.academia.View;
+package com.academiaGenerica.academia.View.Planos.Treino;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -51,17 +51,9 @@ public class CadastroTreinos extends JFrame {
         jButton1.setText("Incluir Novo Treino");
         getContentPane().add(jButton1, BorderLayout.SOUTH);
 
-        jLabel1.setIcon(new ImageIcon(getClass().getResource("halteres-no-chao-de-uma-academia-ai-generative.jpg")));
+        jLabel1.setIcon(new ImageIcon(getClass().getResource("./resouces/templates/halteres-no-chao-de-uma-academia-ai-generative.jpg")));
         getContentPane().add(jLabel1, BorderLayout.WEST);
 
         pack();
-    }
-
-    public static void main(String args[]) {
-        EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new CadastroTreinos().setVisible(true);
-            }
-        });
     }
 }
